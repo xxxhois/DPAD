@@ -1,5 +1,5 @@
 # 基础镜像：Python 3.11 + CUDA（若无需GPU可换为非CUDA版本）
-FROM nvidia/cuda:12.3.1-cudnn8-runtime-ubuntu22.04
+FROM registry.cn-hangzhou.aliyuncs.com/nvidia/cuda:12.3.1-cudnn8-runtime-ubuntu22.04
 
 # 设置非交互模式
 ENV DEBIAN_FRONTEND=noninteractive
@@ -38,3 +38,4 @@ RUN python -m ipykernel install --name py311 --display-name "Python 3.11 (Projec
 
 # 启动命令（你也可以在平台上改为命令行方式运行）
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+
