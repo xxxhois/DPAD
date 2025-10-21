@@ -1,5 +1,5 @@
-# 使用阿里云 PAI 公开 CUDA 基础镜像（无需登录，稳定可靠）
-FROM registry.cn-hangzhou.aliyuncs.com/pai/pai-runtime-cuda12.1-ubuntu22.04:latest
+
+FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
 
 # 设置非交互模式
 ENV DEBIAN_FRONTEND=noninteractive
@@ -45,3 +45,4 @@ EXPOSE 8888
 
 # 启动 Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+
