@@ -52,5 +52,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # 暴露 Jupyter 和 SSH 端口
 EXPOSE 8888 22
 
-# 启动时可自动运行 Jupyter
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+
